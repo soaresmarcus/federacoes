@@ -10,16 +10,17 @@
         <label for="password" class="sr-only">Senha</label>
         <input type="password" id="password" name="password" class="form-control"
                placeholder="Senha" required="required"/>
+
         <br/>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Fazer Login</button>
 
         <div th:if="${param.error}" class="alert alert-danger" role="alert">
             Usuário e senha inválidos
-            <div th:utext="${param.error}"></div>
         </div>
         <div th:if="${param.logout}" class="alert alert-info" role="alert">
             Você foi deslogado.
         </div>
+
     </form>
 
 </body>

@@ -17,7 +17,7 @@ public class InicializacaoDeDadosService {
 
     @PostConstruct
     public void adicionarUsuarioPadrao() {
-        if (usuarioRepository.findByUsuario("marcus") == null) {
+        if (usuarioRepository.findByUsuario("marcus@marcus.com.br") == null) {
             Usuario usuario = usuarioPadrao();
             usuarioRepository.save(usuario);
         }
@@ -25,7 +25,7 @@ public class InicializacaoDeDadosService {
 
     private Usuario usuarioPadrao() {
         Usuario usuario = new Usuario();
-        usuario.usuario = "marcus";
+        usuario.usuario = "marcus@marcus.com.br";
         usuario.senha = new BCryptPasswordEncoder().encode("marcus");
         usuario.permissao = Permissao.ADMIN;
         return usuario;

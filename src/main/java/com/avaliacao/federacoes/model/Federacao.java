@@ -14,13 +14,46 @@ public class Federacao extends AbstractEntity {
     @Size(max = 50)
     @NotEmpty
     @NotNull
-    public String nome;
+    private String nome;
     @Size(max = 2)
     @NotEmpty
     @NotNull
-    public String sigla;
+    private String sigla;
+    @NotNull
     @Convert(converter = LocalDateTimeAttributeConverter.class)
-    public LocalDateTime dataRegistro;
+    private LocalDateTime dataRegistro;
     @Convert(converter = LocalDateTimeAttributeConverter.class)
-    public LocalDateTime dataAtualizacao;
+    private LocalDateTime dataAtualizacao;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public LocalDateTime getDataRegistro() {
+        return dataRegistro;
+    }
+
+    public void setDataRegistro(LocalDateTime dataRegistro) {
+        this.dataRegistro = dataRegistro;
+    }
+
+    public LocalDateTime getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(LocalDateTime dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
+    }
 }
