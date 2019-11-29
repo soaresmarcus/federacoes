@@ -1,0 +1,109 @@
+body {
+    font-family:"Roboto",Helvetica,Arial,sans-serif !important;
+    background: #fff !important;
+}
+
+h1 {
+	font-weight: 300 !important;
+	color: #00746b !important;
+}
+
+h5, h4 {
+	font-weight: 300 !important
+}
+
+thead {
+	background: #3c958e;
+	color: #fff;
+}
+th, td {
+	border: 0px !important;
+	font-weight: normal;
+}
+
+td {
+	border-bottom: 1px solid #ddd !important;
+	font-weight: normal;
+	padding-top: 10px !important;
+}
+
+table {
+	border: 0px !important;
+    margin-top:52px;
+}
+
+.entidade span {
+	float: left;
+	margin-right: 15px;
+}
+
+.entidade .i-sexo {
+	padding: 3px 8px;
+	background: #3c958e;
+	display: block;
+	margin: 10px 10px 5px 5px;
+	color: #fff;
+}
+
+td button {
+	margin-top: 10px;
+}
+
+.entidade h4 {
+	margin-bottom: -7px !important;
+	font-weight: normal !important;
+}
+
+.btn-success.btn-outline {
+	color: #3c958e !important;
+}
+
+.btn-success {
+	background-color: #fff !important;
+	border-color: #3c958e !important;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+	color: #fff !important;
+	background-color: #3c958e !important;
+	border-color: #3c958e !important;
+}
+
+
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+	color: #3c958e !important;
+}
+
+.pagination>li>a, .pagination>li>span {
+	color: #3c958e !important;
+
+}
+
+a:hover, a:focus {
+color: #3c958e !important;
+}
+
+.navbar-top-links li a {
+	color: #fff;
+}
+
+footer {
+	background: #444;
+	display: block;
+	height: 32px;
+	margin-top: 30px;
+}
+
+div.form-radios {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table-responsive {
+    overflow: inherit;
+}
+
+.modal-title-panel {
+    background-color: #3c958e !important;
+    color:white !important;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header::head_sistema"></head>
+<body>
+
+<nav th:replace="menu::menu_superior"></nav>
+
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+            <br/>
+            <h1>Últimas Entradas</h1>
+            <br/>
+        </div>
+        <div class="col-lg-12">
+            <div th:if="${ultimasEntradas.isEmpty()}" class="text-center">
+                <h2>Nenhum dado a ser exibido.</h2>
+            </div>
+            <div th:unless="${ultimasEntradas.isEmpty()}">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped" style="margin-top:52px;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Nascimento</th>
+                                <th>Sexo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="entrada : ${ultimasEntradas}">
+                                <td th:text="${entrada.id}"></td>
+                                <td th:text="${entrada.nome}"></td>
+                                <td th:text="${entrada.nascimento}"></td>
+                                <td th:text="${entrada.sexo}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+</div>
+<footer th:replace="footer::footer_sistema"></footer>
+
+</body>
+</html>
