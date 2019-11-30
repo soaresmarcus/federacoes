@@ -26,6 +26,7 @@ export class EditarComponent implements OnInit {
   }
 
   Atualizar(federacao:Federacao){
+    federacao.dataAtualizacao = new Date();
     this.service.editaFederacao(federacao)
     .subscribe(data=>{
       this.federacao=data;
