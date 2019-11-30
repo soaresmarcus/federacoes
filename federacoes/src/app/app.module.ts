@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './Federacao/listar/listar.component';
-import { AddComponent } from './Federacao/add/add.component';
 import { EditarComponent } from './Federacao/editar/editar.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../app/Service/service.service';
@@ -14,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     ListarComponent,
-    AddComponent,
     EditarComponent
   ],
   imports: [

@@ -30,7 +30,7 @@ export class EditarComponent implements OnInit {
     .subscribe(data=>{
       this.federacao=data;
       alert("Atualizado com sucesso!");
-      this.router.navigate(["listar"]);
+      this.router.navigate([""]);
     });
   }
 

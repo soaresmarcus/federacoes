@@ -36,4 +36,9 @@ public class IndexController {
         federacao.setId(id);
         return federacaoService.editar(federacao);
     }
+
+    @DeleteMapping(path = {"/{id}"})
+    public Federacao excluir(@PathVariable("id") Long id) {
+        return federacaoService.deletar(id);
+    }
 }

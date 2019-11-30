@@ -27,4 +27,8 @@ export class ServiceService {
   editaFederacao(federacao:Federacao){
     return this.http.put<Federacao>(this.Url + federacao.id, federacao)
   }
+
+  excluiFederacao(federacao:Federacao){
+    return this.http.delete<Federacao>(this.Url + federacao.id)
+  }
 }

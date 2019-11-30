@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListarComponent } from './Federacao/listar/listar.component';
-import { AddComponent } from './Federacao/add/add.component';
 import { EditarComponent } from './Federacao/editar/editar.component';
 
 
 const routes: Routes = [
-  {path: 'listar', component:ListarComponent},
-  {path: 'add', component:AddComponent},
+  {path: '', component:ListarComponent},
   {path: 'editar', component:EditarComponent},
 ];
 

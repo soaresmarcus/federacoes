@@ -37,6 +37,10 @@ public class FederacaoServiceImpl implements FederacaoService {
 
     @Override
     public Federacao deletar(Long id) {
-        return null;
+        Federacao federacao = federacaoRepository.findOneById(id);
+        if (federacao != null) {
+            federacaoRepository.delete(federacao);
+        }
+        return federacao;
     }
 }
