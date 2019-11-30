@@ -16,9 +16,7 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  Salvar(nome:String, sigla:String){
-    this.federacao.nome = nome;
-    this.federacao.sigla = sigla;
+  Salvar(federacao:Federacao){
     this.service.addFederacoes(this.federacao)
     .subscribe(data=>{
       alert("Salvo com sucesso!")

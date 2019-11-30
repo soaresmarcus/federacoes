@@ -19,4 +19,9 @@ export class ListarComponent implements OnInit {
     })
   }
 
+  Editar(federacao:Federacao):void{
+    localStorage.setItem("id", federacao.id.toString())
+    this.router.navigate(["editar"]);
+  }
+
 }

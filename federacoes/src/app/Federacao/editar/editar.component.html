@@ -1,1 +1,20 @@
-<p>editar works!</p>
+<div class="container col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Editar Unidade Federativa</h3>
+                <div class="card-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Nome</label>
+                            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="federacao.nome" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Sigla</label>
+                            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="federacao.sigla" type="text" class="form-control">
+                        </div>
+                        <button (click)="Atualizar(federacao)" class="btn btn-info">Editar</button>
+                    </form>
+                </div>        
+            </div>
+        </div>
+    </div>

@@ -26,13 +26,13 @@ public class FederacaoServiceImpl implements FederacaoService {
     }
 
     @Override
-    public Federacao listarId(Long id) {
+    public Federacao listarById(Long id) {
         return federacaoRepository.findOneById(id);
     }
 
     @Override
     public Federacao editar(Federacao federacao) {
-        return null;
+        return federacaoRepository.save(federacao);
     }
 
     @Override

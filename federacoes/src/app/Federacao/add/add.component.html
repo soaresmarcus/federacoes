@@ -6,13 +6,13 @@
                 <form action="">
                     <div class="form-group">
                         <label for="">Nome</label>
-                        <input #nome type="text" class="form-control">
+                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="federacao.nome" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="">Sigla</label>
-                        <input #sigla type="text" class="form-control">
+                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="federacao.sigla"  type="text" class="form-control">
                     </div>
-                    <button (click)="Salvar(nome.value, sigla.value)" class="btn btn-info">Salvar</button>
+                    <button (click)="Salvar(federacao)" class="btn btn-info">Salvar</button>
                 </form>
             </div>        
         </div>

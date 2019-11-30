@@ -4,7 +4,6 @@ package com.avaliacao.federacoes.controllers;
 import com.avaliacao.federacoes.model.Federacao;
 import com.avaliacao.federacoes.services.FederacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,5 +24,16 @@ public class IndexController {
     @PostMapping
     public Federacao salvar(@RequestBody Federacao federacao) {
         return federacaoService.add(federacao);
+    }
+
+    @GetMapping(path = {"/{id}"})
+    public Federacao listarById(@PathVariable("id") Long id) {
+        return federacaoService.listarById(id);
+    }
+
+    @PutMapping(path = {"/{id}"})
+    public Federacao editar(@RequestBody Federacao federacao, @PathVariable("id") Long id) {
+        federacao.setId(id);
+        return federacaoService.editar(federacao);
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface FederacaoService {
     List<Federacao>listar();
-    Federacao listarId(Long id);
+    Federacao listarById(Long id);
     Federacao add(Federacao federacao);
     Federacao editar(Federacao federacao);
     Federacao deletar(Long id);
