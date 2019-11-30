@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Federações</h3>
+            <div class="card-body">
+               <table class="table table-hover">
+                   <thead>
+                       <tr>
+                           <th>ID</th>
+                           <th>Nome</th>
+                           <th>Sigla</th>
+                           <th>Ações</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr *ngFor="let federacao of federacoes" class="text-center">
+                           <td>{{federacao.id}}</td>
+                           <td>{{federacao.nome}}</td>
+                           <td>{{federacao.sigla}}</td>
+                           <td>
+                               <button class="btn btn-warning">Editar</button>
+                               <button class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
+                            </td>
+                       </tr>
+                   </tbody>
+               </table> 
+            </div>        
+        </div>
+    </div>
+</div>
