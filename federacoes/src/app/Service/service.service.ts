@@ -15,4 +15,10 @@ export class ServiceService {
   getFederacoes(){
     return this.http.get<Federacao[]>(this.Url);
   }
+
+  addFederacoes(federacao:Federacao){
+    console.log("federacao");
+    console.log(federacao);
+    return this.http.post<Federacao>(this.Url, federacao);
+  }
 }

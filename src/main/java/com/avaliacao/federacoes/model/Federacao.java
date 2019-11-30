@@ -21,7 +21,7 @@ public class Federacao extends AbstractEntity {
     private String sigla;
     @NotNull
     @Convert(converter = LocalDateTimeAttributeConverter.class)
-    private LocalDateTime dataRegistro;
+    private LocalDateTime dataRegistro = LocalDateTime.now();
     @Convert(converter = LocalDateTimeAttributeConverter.class)
     private LocalDateTime dataAtualizacao;
 

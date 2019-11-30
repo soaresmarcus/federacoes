@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServiceService } from '../../Service/service.service';
+import { Federacao } from 'src/app/Model/Federacao';
 
 @Component({
   selector: 'app-add',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-
-  constructor() { }
+  federacao:Federacao = new Federacao();
+  
+  constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
+  }
+
+  Salvar(nome:String, sigla:String){
+    this.federacao.nome = nome;
+    this.federacao.sigla = sigla;
+    this.service.addFederacoes(this.federacao)
+    .subscribe(data=>{
+      alert("Salvo com sucesso!")
+      this.router.navigate(["listar"]);
+    })
   }
 
 }
