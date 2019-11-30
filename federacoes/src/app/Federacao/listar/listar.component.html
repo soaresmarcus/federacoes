@@ -14,7 +14,7 @@
                     </div>
                     <button (click)="Salvar(federacao)" class="btn btn-info">Salvar</button>
                 </form>
-            </div>        
+            </div>
         </div>
     </div>
 </div>
@@ -29,22 +29,26 @@
                            <th>ID</th>
                            <th>Nome</th>
                            <th>Sigla</th>
+                           <th>Data Registro</th>
+                           <th>Data Atualização</th>
                            <th>Ações</th>
                        </tr>
                    </thead>
                    <tbody>
-                       <tr *ngFor="let federacao of federacoes" class="">
+                       <tr ng-repeat="let federacao of federacoes" class="">
                            <td>{{federacao.id}}</td>
                            <td>{{federacao.nome}}</td>
                            <td>{{federacao.sigla}}</td>
+                           <td>{{federacao.dataRegistro | date : "dd/MM/y hh:mm:ss"}}</td>
+                           <td>{{federacao.dataAtualizacao | date : "dd/MM/y hh:mm:ss"}}</td>
                            <td>
                                <button (click)="Editar(federacao)" class="btn btn-warning">Editar</button>
                                <button (click)="Excluir(federacao)"class="btn btn-danger" style="margin-left: 10px;">Excluir</button>
                             </td>
                        </tr>
                    </tbody>
-               </table> 
-            </div>        
+               </table>
+            </div>
         </div>
     </div>
 </div>
